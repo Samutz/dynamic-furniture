@@ -1,0 +1,19 @@
+<?xml version='1.0'?>
+<PapyrusProject xmlns="PapyrusProject.xsd"
+   Flags="Institute_Papyrus_Flags.flg"
+   Output=".\Scripts"
+   Asm="Discard"
+   Optimize="true"
+   Release="false"
+   Final="false"
+>
+	<Imports>
+		<Import>..\..\Stock Game\data\Scripts\Source\Base</Import>
+		<Import>..\WSFW Script Sources (Dev)\Scripts\Source\User</Import>
+		<Import>..\Dynamic Furniture Scripts (Dev)\Scripts\Source\User</Import>
+	</Imports>
+	<Scripts>
+		<Script>DynamicFurniture:CanarySaveFileMonitor</Script>
+		<Script>DynamicFurniture:FurnitureScript</Script>
+	</Scripts>
+</PapyrusProject>

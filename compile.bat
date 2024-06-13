@@ -1,0 +1,1 @@
+"..\..\Stock Game\Papyrus Compiler\PapyrusCompiler.exe" "DynamicFurniture.ppj"
