@@ -55,7 +55,9 @@ Function SpawnDynamicItems(int iMarkerNumber)
 				endIf
 				if formToSpawn
 					DynamicSpawnItems[i].akSpawnedItem = PlaceRelativeToMe(Self, formToSpawn, DynamicSpawnItems[i].fOffsetX, DynamicSpawnItems[i].fOffsetY, DynamicSpawnItems[i].fOffsetZ, DynamicSpawnItems[i].fRotationX, DynamicSpawnItems[i].fRotationY, DynamicSpawnItems[i].fRotationZ, DynamicSpawnItems[i].fScale)
-					DynamicSpawnItems[i].akSpawnedItem.Enable(false)
+					var[] args = new var[1]
+					args[0] = true
+					DynamicSpawnItems[i].akSpawnedItem.CallFunctionNoWait("Enable", args)
 					DynamicSpawnItems[i].akSpawnedItem.SetLinkedRef((Self as ObjectReference), kwLinkDynamicItems)
 				endIf
 			endIf
@@ -81,7 +83,9 @@ Function SpawnStaticItems()
 			endIf
 			if formToSpawn
 				ObjectReference akNewSpawnItem = PlaceRelativeToMe(Self, formToSpawn, StaticSpawnItems[i].fOffsetX, StaticSpawnItems[i].fOffsetY, StaticSpawnItems[i].fOffsetZ, StaticSpawnItems[i].fRotationX, StaticSpawnItems[i].fRotationY, StaticSpawnItems[i].fRotationZ, StaticSpawnItems[i].fScale)
-				akNewSpawnItem.Enable(false)
+				var[] args = new var[1]
+				args[0] = true
+				akNewSpawnItem.CallFunctionNoWait("Enable", args)
 				akNewSpawnItem.SetLinkedRef((Self as ObjectReference), kwLinkStaticItems)
 			endIf
 			i += 1
