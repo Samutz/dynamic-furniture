@@ -2,7 +2,7 @@ Scriptname DynamicFurniture:FurnitureScript extends ObjectReference
 
 Group DynamicFurniture
 	StaticSpawnItemsStruct[] Property StaticSpawnItems Auto Const
-	DynamicSpawnItemsStruct[] Property DynamicSpawnItems Auto
+	DynamicSpawnItemsStruct[] Property DynamicSpawnItems Auto Const
 	Keyword Property kwLinkDynamicItems Auto Const Mandatory
 	Keyword Property kwLinkStaticItems Auto Const Mandatory
 EndGroup
