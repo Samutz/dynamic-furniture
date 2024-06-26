@@ -214,6 +214,11 @@ Event OnWorkshopObjectGrabbed(ObjectReference akReference)
 	Cleanup()
 EndEvent
 
+Function Disable(bool abFade = false)
+	Cleanup()
+	Parent.Disable(abFade)
+EndFunction
+
 Function Delete()
 	Cleanup()
 	Parent.Delete()
