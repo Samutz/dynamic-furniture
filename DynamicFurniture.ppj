@@ -9,7 +9,7 @@
 >
 	<Imports>
 		<Import>..\..\Stock Game\data\Scripts\Source\Base</Import>
-		<Import>..\Dynamic Furniture SMM (Release)\Scripts\Source\User</Import>
+		<Import>Scripts\Source\User</Import>
 	</Imports>
 	<Scripts>
 		<Script>DynamicFurniture:CanarySaveFileMonitor</Script>
