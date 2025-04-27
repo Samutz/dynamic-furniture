@@ -9,11 +9,12 @@
 >
 	<Imports>
 		<Import>..\..\Stock Game\data\Scripts\Source\Base</Import>
-		<Import>..\WSFW Script Sources (Dev)\Scripts\Source\User</Import>
-		<Import>..\Dynamic Furniture Scripts (Dev)\Scripts\Source\User</Import>
+		<Import>..\Dynamic Furniture SMM (Release)\Scripts\Source\User</Import>
 	</Imports>
 	<Scripts>
 		<Script>DynamicFurniture:CanarySaveFileMonitor</Script>
 		<Script>DynamicFurniture:FurnitureScript</Script>
+		<Script>DynamicFurniture:CobbLibraryRotations</Script>
+		<Script>DynamicFurniture:CobbLibraryVectors</Script>
 	</Scripts>
 </PapyrusProject>

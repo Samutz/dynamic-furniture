@@ -235,6 +235,6 @@ ObjectReference Function PlaceRelativeToMe(ObjectReference selfRef, Form baseFor
 	fRotOff[0] = fRotOffX
 	fRotOff[1] = fRotOffY
 	fRotOff[2] = fRotOffZ
-	WorkshopFramework:Library:ThirdParty:Cobb:CobbLibraryRotations.MoveObjectRelativeToObject(spawnedRef, selfRef, fPosOff, fRotOff)
+	DynamicFurniture:CobbLibraryRotations.MoveObjectRelativeToObject(spawnedRef, selfRef, fPosOff, fRotOff)
 	return spawnedRef
 EndFunction
