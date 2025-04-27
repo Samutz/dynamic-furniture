@@ -111,10 +111,16 @@ Function Cleanup()
 
 		int i = 0
 		while i < DynamicSpawnItems.length
-			DynamicSpawnItems[i].akSpawnedItem.Disable(false)
-			DynamicSpawnItems[i].akSpawnedItem.Delete()
-			DynamicSpawnItems[i].akSpawnedItem = none
-			i += 1
+			if  DynamicSpawnItems[i].akSpawnedItem != none
+				DynamicSpawnItems[i].akSpawnedItem.Disable(false)
+				DynamicSpawnItems[i].akSpawnedItem.Delete()
+				DynamicSpawnItems[i].akSpawnedItem = none
+			endIf
+			if DynamicSpawnItems.length < i + 1
+				i = DynamicSpawnItems.FindStruct("iMarkerNumber", iMarkerNumber, i + 1)
+			else
+				i = -1
+			endIf
 		endWhile
 
 		ObjectReference[] spawns = GetLinkedRefChildren(kwLinkStaticItems)
@@ -222,6 +228,11 @@ EndFunction
 Function Delete()
 	Cleanup()
 	Parent.Delete()
+EndFunction
+
+Function DeleteWhenAble()
+	Cleanup()
+	Parent.DeleteWhenAble()
 EndFunction
 
 ObjectReference Function PlaceRelativeToMe(ObjectReference selfRef, Form baseForm, float fPosOffX = 0.0, float fPosOffY = 0.0, float fPosOffZ = 0.0, float fRotOffX = 0.0, float fRotOffY = 0.0, float fRotOffZ = 0.0, float fScale = 1.0) Global
